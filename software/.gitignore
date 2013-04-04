@@ -6,3 +6,4 @@ build.xml
 !IOIODude/build.xml
 local.properties
 proguard-project.txt
+target

@@ -10,4 +10,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>IOIOLib</name>
+	<modules>
+		<module>ioiolib-api</module>
+		<module>ioiolib-core</module>
+		<module>ioiolib-pc</module>
+		<module>ioiolib-android</module>
+	</modules>
 </project>
