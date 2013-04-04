@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ioio</groupId>
+	<artifactId>ioio-parent</artifactId>
+	<version>2013040401</version>
+	<packaging>pom</packaging>
+	<name>IOIO parent POM</name>
+	<description>parent POM for all official IOIO projects (including IOIOLib, utilities, and examples)</description>
+
+	<organization>
+		<name>IOIO</name>
+		<url>https://github.com/ytai/ioio/wiki</url>
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+		<java.source>${java.version}</java.source>
+		<java.target>${java.version}</java.target>
+
+		<android.version>2.1_r1</android.version>
+		<android.sdk>7</android.sdk>
+
+		<android.plugin.version>3.5.2</android.plugin.version>
+	</properties>
+
+	<!-- developers -->
+
+	<!-- repositories -->
+
+	<!-- pluginRepositories -->
+
+	<!-- distributionManagement -->
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.android</groupId>
+				<artifactId>android</artifactId>
+				<version>${android.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<version>${android.plugin.version}</version>
+					<configuration>
+						<emulator>
+							<avd>${android.sdk}</avd>
+						</emulator>
+						<undeployBeforeDeploy>true</undeployBeforeDeploy>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
