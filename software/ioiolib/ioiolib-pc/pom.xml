@@ -1,10 +1,33 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>ioio</groupId>
-    <artifactId>ioiolib</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>ioiolib-pc</groupId>
-  <artifactId>ioiolib-pc</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ioio</groupId>
+		<artifactId>ioiolib</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ioiolib-pc</artifactId>
+
+	<repositories>
+		<repository>
+			<id>sparetimelabs</id>
+			<name>Spare Time Labs</name>
+			<url>http://www.sparetimelabs.com/maven2/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>ioio</groupId>
+			<artifactId>ioiolib-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sparetimelabs</groupId>
+			<artifactId>purejavacomm</artifactId>
+			<version>0.0.16</version>
+		</dependency>
+	</dependencies>
+	<name>IOIO PC library</name>
+	<description>Library targeted at Java SE, including serial-port connectivity.</description>
 </project>

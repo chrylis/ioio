@@ -3,9 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>ioio</groupId>
-		<artifactId>ioiolib</artifactId>
+		<artifactId>examples-android</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ioiolib-api</artifactId>
-	<name>IOIOLib API</name>
+	
+	<packaging>apk</packaging>
+	<artifactId>android-HelloIOIO</artifactId>
 </project>

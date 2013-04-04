@@ -1,10 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>ioio</groupId>
-    <artifactId>ioiolib</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>ioiolib-core</groupId>
-  <artifactId>ioiolib-core</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ioio</groupId>
+		<artifactId>ioiolib</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ioiolib-core</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>ioio</groupId>
+			<artifactId>ioiolib-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<name>IOIO core implementation</name>
+	<description>Protocol implementation shared between platforms.</description>
 </project>

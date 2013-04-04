@@ -3,27 +3,29 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>ioio</groupId>
-		<artifactId>ioiolib</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>ioio-parent</artifactId>
+		<version>2013040401</version>
 	</parent>
-	<artifactId>ioiolib-android</artifactId>
+	<artifactId>examples-android</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-	<name>IOIO Android library</name>
-	<description>Library targeted at the Android platform.</description>
-<!-- 	<packaging>apklib</packaging> -->
+	<modules>
+		<module>android-HelloIOIO</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
 			<groupId>ioio</groupId>
-			<artifactId>ioiolib-core</artifactId>
-			<version>${project.version}</version>
+			<artifactId>ioiolib-android</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -35,6 +37,9 @@
 					<assetsDirectory>${project.basedir}/assets</assetsDirectory>
 					<resourceDirectory>${project.basedir}/res</resourceDirectory>
 					<nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
+					<apkMetaIncludes>
+						<metaInclude>services/**</metaInclude>
+					</apkMetaIncludes>
 				</configuration>
 				<extensions>true</extensions>
 			</plugin>
